@@ -14,31 +14,67 @@
 > Introduction: Should “such as Serpent [9, 10] and ORIGEN [11], estimate…” be “such as Serpent [9,
 > 10] and ORIGEN [11], that estimate…” or “such as Serpent [9, 10] and ORIGEN [11], which estimate…”?
 
+Yes. It now reads: ", which estimate ".
 
+> Introduction: “a High-Temperature Gas-Cooled Reactor” should not be capitalized.
 
-> Introduction: “a High-Temperature Gas-Cooled Reactor” should not be capitalized. Introduction:
-> “Uncertainty Quantification” should not be capitalized.
+Yes. It now reads: "a high-temperature gas-cooled reactor".
+
+> Introduction: “Uncertainty Quantification” should not be capitalized.
+
+Yes. It now reads: "uncertainty quantification".
 
 > Background: Math tip – subscripts ‘ch’ for charged particles and “Tr” for transport should not be
 > in italic. Italic font is for variables; these are identifiers on the variable .
 
+Yes. In the source files, $H_{i}$ now reads $H_{\mathrm{i}}$, where i=T; ch; \gamma, Tr; T,L; \gamma, L.
+Using the \mathrm removes the italic in the subscripts within an equation/align environemnt.
+
 > Background: “Pressurized Water Reactor” should not be capitalized.
+
+Yes. It now reads: "pressurized water reactor".
+
 > Background: Should “by radiation originated” be “by radiation originating?”
+
+Yes. It now reads: "by radiation originating".
+
 > Methodology: “SCALE Code System” should just be SCALE code system.”
+
+Yes. It now reads: "SCALE code system".
+
 > Methodology: Equation 2 is a repeat of equation 1. Units (W, MeV, s⁻¹) are not usually included in
 > the equations, but if you keep them, they should not be in italics (italics is for variables).
 > Units [γ/s] should just be [s⁻¹]. Constants, such as 1.6022×10⁻¹³ should also include units (W s
 > MeV⁻¹).
-> 
+
+Yes. The repeated equation was removed.
+I removed the italics from the units.
+I will keep the units in the equations.
+I think they add reproducibility.
+
 > ATR Experiment: “corner lobes” is mentioned and later “the 5 lobes” is mentioned. What exactly is a
 > lobe? Are there 4, 5 or 9?
-> 
-> RA-6 Structures: “Boron Neutron Capture Therapy” does not need to be capitalized. “Normal Fuel
-> Elements” and “Control Fuel Elements do not need to be capitalized. “8x10 array” should be “8 × 10
-> array.” “x-direction” and “y-direction” should be “-direction” and “-direction.” “the rector
-> operated” should be “the reactor operated.”
+
+Yes, the "corner lobes" is misleading. I have removed it.
+There are 5 lobes: NW, NE, C, SW, SE.
+The definition of a lobe is more or less arbitrary, but it is related to the points of the reactor where there is greater control over the flux level.
+This is due to the neck shim rods located in the neck shim housing.
+And the 5 lobes are located at the four ends and center of the neck shim housing.
+
+> RA-6 Structures: “Boron Neutron Capture Therapy” does not need to be capitalized.
+
+Yes. It now reads: "boron neutron capture therapy".
+
+> “Normal Fuel Elements” and “Control Fuel Elements do not need to be capitalized. “8x10 array” should be “8 × 10
+> array.” “x-direction” and “y-direction” should be “-direction” and “-direction.”
+
+> “the rector operated” should be “the reactor operated.”
+
 > RA-6 Results: The Table I captions says “Values expressed in W.” But the table lists values in
 > units of W m⁻³ and unitless ratios.
+
+Yes. The "Values expressed in W" is removed.
+
 > 
 > 
 > References

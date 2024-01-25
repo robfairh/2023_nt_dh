@@ -4,7 +4,7 @@
 \documentclass{style/nseJournal}
 
 \usepackage[acronym,toc]{glossaries}
-\include{acros}
+\include{revised_acros}
 \usepackage{booktabs}
 \usepackage{relsize}
 
@@ -61,7 +61,7 @@ Numerous studies have targeted diverse accidents in research reactors, such as t
 Kazeminejad et al. \cite{kazeminejad_thermal_2008} investigated the peak fuel and cladding temperatures of a 10-MW IAEA research reactor after a LOFA with flow inversion.
 Meanwhile, Hainoun et al. \cite{hainoun_international_2014} introduced a benchmark exercise for thermal-hydraulic codes studying a LOFA in the IEA-R1 research reactor, and Abdelmaksoud et al. \cite{abdelmaksoud_analysis_2022} examined the passive heat removal by natural convection and radiation of a typical research reactor after a LOCA.
 These studies rely on different versions of the ANSI/ANS standard \cite{ans_decay_1994} for estimating the decay heat after reactor shutdown, which assumes that the energy released after shutdown is deposited locally in the region of interest, i.e., the reactor core.
-This assumption is echoed by several other soft packages such as Serpent \cite{leppanen_serpent_2015, giot_decay_2018} and ORIGEN \cite{scale}, estimate the decay heat by assuming the local deposition of heat, and several studies relied on the same assumption.
+This assumption is echoed by several other software packages such as Serpent \cite{leppanen_serpent_2015, giot_decay_2018} and ORIGEN \cite{scale}, which estimate the decay heat by assuming the local deposition of heat, and several studies relied on the same assumption.
 Lee et al. \cite{lee_decay_2010} used ORIGEN-2 to compare the decay heat in a \gls*{HTGR} core containing transuranic and uranium fuel.
 Ilas et al. \cite{ilas_modeling_2015} calculated the decay heat in the \gls*{HFIR} irradiated fuel using ORIGEN-2.2, and Hawkes et al. \cite{hawkes_sensitivity_2015} evaluated with ORIGEN-2.2 the thermal behavior of AGR-2, which is an \gls*{ATR} fueled experiment for TRISO particles.
 
@@ -108,9 +108,9 @@ The delayed neutron heating is caused by charged particles that deposit their en
 The delayed gamma heating is caused by photons that deposit their energy globally and must be transported \cite{peterson-droogh_current_2018}.
 The following formula calculates the nuclear heating after reactor shutdown
 \begin{align}
-H_{T} = H_{ch} + H_{\gamma, Tr} \label{eq:heat}
+H_{\mathrm{T}} = H_{\mathrm{ch}} + H_{\mathrm{\gamma, Tr}} \label{eq:heat}
 \end{align}
-where $H_{T}$ is the total heat deposited in the region of interest, $H_{ch}$ is the energy deposited by charged particles in the region of interest, $H_{\gamma, Tr}$ is the energy deposited in the region of interest resulting from photon transport.
+where $H_{\mathrm{T}}$ is the total heat deposited in the region of interest, $H_{\mathrm{ch}}$ is the energy deposited by charged particles in the region of interest, $H_{\mathrm{\gamma, Tr}}$ is the energy deposited in the region of interest resulting from photon transport.
 
 % Different methods: formal 3-step process
 A common method for the calculation of the delayed gamma contribution is the so-called \gls*{R2S} process \cite{chen_rigorous_2002}.
@@ -136,7 +136,7 @@ For the formal 3-step process, Mozin \cite{mozin_delayed_2011} utilized MCNP \ci
 % lemaire_estimation_2015
 Lemaire et al. \cite{lemaire_estimation_2015} utilized TRIPOLI-4 \cite{tripoli4} and the point-depletion tool PEPIN-2 \cite{pepin2} to study the delayed photon contribution to the nuclear heating in the Jules Horowitz Reactor.
 % noh_estimation_2018 - MCNP6 & ORIGEN-2.1
-Noh et al. \cite{noh_estimation_2018} coupled MCNP and ORIGEN to study the delayed gamma heating by radiation originated in the activated structures of the High flux Advanced Neutron Application ReactOr (HANARO), a 30-MW research reactor of the \gls*{KAERI}.
+Noh et al. \cite{noh_estimation_2018} coupled MCNP and ORIGEN to study the delayed gamma heating by radiation originating in the activated structures of the High flux Advanced Neutron Application ReactOr (HANARO), a 30-MW research reactor of the \gls*{KAERI}.
 
 % peterson-droogh_current_2018
 Peterson-Droogh and Howard \cite{peterson-droogh_current_2018} summarized in a paper the modeling techniques for the calculation of the heating rates and the activity of iridium-192 targets in the \gls*{HFIR} at the \gls*{ORNL}.
@@ -166,7 +166,7 @@ However, this method is most reliable if the generated radionuclides have short 
 % % Different methods: PIKMT method
 % The \textit{PIKMT} method has also become predominant in the past few years for delayed gamma heating calculations.
 % It was first introduced by Brown et al. \cite{brown_monte_2008} and relies on the assumption that the prompt and delayed gamma spectra are similar.
-% The method uses one neutron-photon coupled simulation using the MCNP PIKMT card to evaluate the energy deposited by prompt gamma radiation originated at fuel fission events.
+% The method uses one neutron-photon coupled simulation using the MCNP PIKMT card to evaluate the energy deposited by prompt gamma radiation originating at fuel fission events.
 % Then, it determines the delayed gamma contribution by scaling the deposited energy
 % % brown_monte_2008
 % \begin{align}
@@ -177,7 +177,7 @@ However, this method is most reliable if the generated radionuclides have short 
 % Different methods: PIKMT method
 The \textit{PIKMT} method has also become predominant in the past few years for delayed gamma heating calculations.
 It was first introduced by Brown et al. \cite{brown_monte_2008} and relies on the assumption that the prompt and delayed gamma spectra are similar.
-The method uses one neutron-photon coupled simulation using the MCNP PIKMT card to evaluate the energy deposited by prompt gamma radiation originated at fuel fission events, and then it scales it to the delayed gamma component.
+The method uses one neutron-photon coupled simulation using the MCNP PIKMT card to evaluate the energy deposited by prompt gamma radiation originating at fuel fission events, and then it scales it to the delayed gamma component.
 Ilas et al. \cite{ilas_impact_2013} used the PIKMT method for calculating the heating rates in the \gls*{HFIR}’s reflector during a \gls*{HEU} to \gls*{LEU} conversion study.
 Davidson et al. \cite{davidson_heat_2017} calculated the delayed gamma heating in different reactor regions using the PIKMT method for another HEU-to-LEU conversion study in HFIR.
 Jurbandam \cite{jurbandam_calculation_2018} calculated the spatial heat distribution in the SAFARI-1 nuclear reactor, relying on the PIKMT method to account for the delayed gamma contributions.
@@ -253,7 +253,7 @@ Additionally, the calculations can be configured to utilize the conventional pre
 
 % %% ORIGEN
 % ORIGEN is a general-purpose point depletion and decay tool to calculate isotopic concentrations, radiation source terms, and decay heat.
-% ORIGEN is integrated into the SCALE Code System, which is a modeling and simulation suite for nuclear safety analysis and design.
+% ORIGEN is integrated into the SCALE code system, which is a modeling and simulation suite for nuclear safety analysis and design.
 % MOAA uses the calculated parameters from the MCNP output files to define the SCALE input files.
 % Besides ORIGEN, MOAA also uses the COUPLE and OPUS modules from SCALE.
 % ORIGEN requires a single space and spectrum-weighted cross-section library that MOAA generates using COUPLE.
@@ -288,7 +288,7 @@ For cells defined as repeated structures, the user must specify the volume of th
 
 %% ORIGEN
 ORIGEN is a general-purpose point depletion and decay tool to calculate isotopic concentrations, radiation source terms, and decay heat.
-ORIGEN is integrated into the SCALE Code System, which is a modeling and simulation suite for nuclear safety analysis and design.
+ORIGEN is integrated into the SCALE code system, which is a modeling and simulation suite for nuclear safety analysis and design.
 MOAA uses the calculated parameters from the MCNP output files to define the SCALE input files.
 Besides ORIGEN, MOAA also uses the COUPLE and OPUS modules from SCALE.
 ORIGEN requires a single space and spectrum-weighted cross-section library that MOAA generates using COUPLE.
@@ -298,24 +298,23 @@ Meanwhile, OPUS provides the ability to extract specific data from the ORIGEN ou
 \subsection{Delayed heating}
 
 The delayed heating calculation can be separated into two parts.
-The first part calculates the deposition of energy from charged particles $H_{ch}$.
-This part includes only the charged particles that originated in the geometry of the component of interest.
-The second part calculates the deposition of energy from photons $H_{\gamma, Tr}$.
+The first part calculates the deposition of energy from charged particles $H_{\mathrm{ch}}$.
+This part includes only the charged particles originating in the geometry of the component of interest.
+The second part calculates the deposition of energy from photons $H_{\mathrm{\gamma, Tr}}$.
 Because photons deposit their energy globally, photon transport is required, and this includes the photons originating from across the reactor.
 
-The following equations describe the delayed heating
+Equation \ref{eq:heat} along with the following equations describe the delayed heating
 \begin{align}
-H_{T} [W] &= H_{ch} + H_{\gamma, Tr}  \label{eq-heat} \\
-H_{ch} [W] &= H_{T, L} - H_{\gamma, L} \\
-H_{\gamma, Tr} [W] &= 1.6022 \times 10^{-13} \times \: ^* \! F8 [MeV] \times \mathlarger{\sum}_i S_i \label{eq-ga-tr} \\
-S_i[\gamma/s] &= \int_{E} \varphi^\gamma_i(E) dE \\
+H_{\mathrm{ch}} [\mathrm{W}] &= H_{\mathrm{T,L}} - H_{\mathrm{\gamma, L}} \\
+H_{\mathrm{\gamma, Tr}} [\mathrm{W}] &= 1.6022 \times 10^{-13} \mathrm{J} \cdot \mathrm{MeV}^{-1} \times \: ^* \! F8 [\mathrm{MeV}] \times \mathlarger{\sum}_i S_i \label{eq-ga-tr} \\
+S_i[\mathrm{\gamma} \cdot \mathrm{s}^{-1}] &= \int_{E} \varphi^\gamma_i(E) dE \\
 s_i [-] &= S_i / \mathlarger{\sum}_j S_j \label{eq-emiprob}
 \end{align}
-where $H_{T}$ is the total heat deposited in the region of interest, $H_{ch}$ is the energy deposited in the region of interest by charged particles, $H_{\gamma, Tr}$ is the energy deposited in the region of interest resulting from the photon transport, $H_{T,L}$ is the total decay heat, $H_{\gamma, L}$ is the total gamma heating, $^\ast F8$ is the energy deposition calculated by an $^\ast$F8 tally, $S_i$ is the total photon emission rate from the region $i$, $\varphi^\gamma_i(E)$ the photon source energy distribution from region $i$, and $s_i$ is the source cell emission probability.
+where $H_{\mathrm{T}}$ is the total heat deposited in the region of interest, $H_{\mathrm{ch}}$ is the energy deposited in the region of interest by charged particles, $H_{\mathrm{\gamma, Tr}}$ is the energy deposited in the region of interest resulting from the photon transport, $H_{\mathrm{T,L}}$ is the total decay heat, $H_{\mathrm{\gamma, L}}$ is the total gamma heating, $^\ast F8$ is the energy deposition calculated by an $^\ast$F8 tally, $S_i$ is the total photon emission rate from the region $i$, $\varphi^\gamma_i(E)$ the photon source energy distribution from region $i$, and $s_i$ is the source cell emission probability.
 
 Overall, the calculation scheme follows the formal 3-step process, in which MOAA conducts the first two steps, and multiple MCNP photon-transport simulations carry out the third step, calculating the delayed gamma heating.
 As shown in Figure \ref{fig:workflow_2}, the nuclear heating calculation relies primarily on MOAA.
-MOAA calculates $H_{T,L}$ and $H_{\gamma, L}$ in the component of interest assuming those to be locally deposited.
+MOAA calculates $H_{\mathrm{T,L}}$ and $H_{\mathrm{\gamma, L}}$ in the component of interest assuming those to be locally deposited.
 
 \begin{figure}[htbp!]
   \begin{center}
@@ -337,7 +336,7 @@ The source spatial distribution is assumed uniform in each source cell.
 For uniformly sampling the birth of a particle in a cell, MCNP uses the enclosing volume rejection method, which requires the user definition of a volume enveloping the source cell.
 The randomly sampled points in the volume are accepted as source points only if they fall inside the source cell.
 % In the calculation workflow described here, the user can define either a parallelepiped or a cylinder as the enclosing volume.
-Finally, the photon transport estimates $^\ast F8$, which allows the calculation of $H_{\gamma, Tr}$ (eq. \ref{eq-ga-tr}).
+Finally, the photon transport estimates $^\ast F8$, which allows the calculation of $H_{\mathrm{\gamma, Tr}}$ (eq. \ref{eq-ga-tr}).
 
 
 \section{Results}
@@ -357,7 +356,7 @@ The ATR was designed to provide an irradiation test environment for conducting a
 % ATR: reactor description
 The ATR core contains 40 fuel elements arranged in a serpentine annulus between and around nine flux traps, as shown in Figure \ref{fig:atr}.
 Each fuel element consists of 19 parallel, curved, aluminum-clad fuel plates forming a 45-degree sector of a right circular cylinder.
-The fuel arrangement gives the reactor core a clover-leaf configuration, which allows the \gls*{ATR} to be operated at different power levels in the corner lobes, allowing for independent testing conditions within the same operating cycle.
+The fuel arrangement gives the reactor core a clover-leaf configuration, which allows the \gls*{ATR} to be operated at different power levels in the five lobes (NW, NE, C, SW, SE), allowing for independent testing conditions within the same operating cycle.
 Within each fuel plate, the fuel meat consists of highly enriched (93 wt\%) uranium aluminide (UAl$_x$) fuel powder dispersed in aluminum.
 Plates 1 through 4 and 16 through 19 contain natural boron carbide (B$_4$C) powder as a burnable poison.
 
@@ -401,7 +400,7 @@ This exercise considers an experiment sample made of aluminum.
 
 % POWER
 Although the ATR maximum power rating is 250 MWth, most contemporary experiments do not require such a level, and the reactor operates at a much lower power.
-This work considers for the calculations a total operating power of 110 MWth that is equally distributed among the 5 lobes.
+This work considers for the calculations a total operating power of 110 MWth that is equally distributed among the five lobes.
 % Irradiation time
 The irradiation time is 30 days, and the decay is recorded in seven non-uniformly distributed steps up to 12 hours after shutdown.
 
@@ -421,7 +420,7 @@ The material definitions of each fuel plate were duplicated for each fuel elemen
 Additionally, the volume of each fuel plate was calculated and added into the MCNP input file.
 
 Figure \ref{fig:atr-time} presents the experiment heat production over time.
-$H_{\gamma,Tr}$ was calculated for 41 independent photon-transport simulations, wherein each simulation accounts for the contribution to delayed gamma heating of each fuel assembly and the experiment itself.
+$H_{\mathrm{\gamma, Tr}}$ was calculated for 41 independent photon-transport simulations, wherein each simulation accounts for the contribution to delayed gamma heating of each fuel assembly and the experiment itself.
 
 The gamma heating immediately after shutdown is 849.2 W, and the heating due to charged particles is 56.32 W, which equals to 6.6\% of the total heating in the experiment.
 The self-gamma heating is 5.8 W, which is equal to 0.73\% of the total delayed gamma contribution and 0.68\% of the total heating.
@@ -446,8 +445,8 @@ Additionally, the sample produced a self-heating of 7.3\%, from which 6.6\% came
 
 % Maybe talk about the following:
 % The neck shim housing has an elongated shape.
-% So, several of the gammas originated here will not be deposited in the experiment position but in the fuel elements.
-% Additionally, our method considers that the gamma are originated uniformly across the cell geometry.
+% So, several of the gammas originating here will not be deposited in the experiment position but in the fuel elements.
+% Additionally, our method considers that the gamma originate uniformly across the cell geometry.
 % Which in this case a mesh based approach may be more accurate.
 
 \begin{figure}[htbp!] %or H 
@@ -553,18 +552,17 @@ A three times fold increase in operation power is translated into an increase in
     \centering
     \includegraphics[width=0.80\linewidth]{figures/results_b}
     \hfill
-    \caption{Delayed heating in the RA-6 reactor structures. Values expressed in $W$. Left: values corresponding to 1 MWth. Right: values corresponding to 3 MWth.}
+    \caption{Delayed heating in the RA-6 reactor structures. Values expressed in W. Left: values corresponding to 1 MWth. Right: values corresponding to 3 MWth.}
     \label{fig:ra6-3}
 \end{figure}
 
 \begin{table}[htbp!]
   \centering
-  \caption{Main results for delayed heating in the RA-6 reactor structures for an operating power of 1 MWth. Values expressed in $W$.}
+  \caption{Main results for delayed heating in the RA-6 reactor structures for an operating power of 1 MWth. $V$ is the cell volume.}
   \label{tab:ra6-res}
   \begin{tabular}{cccc}
     \toprule
-
-                    & $H_{T, 1MW}/V [W/m^3]$  & $H_{T, 3MW}/V [W/m^3]$  & $ \frac{H_{T, 3MW}}{H_{T, 1MW}} $  \\
+                    & $H_{\mathrm{T, 1MW}}/V$ [W $\cdot$ m$^{-3}$]  & $H_{\mathrm{T, 3MW}}/V$ [W $\cdot$ m$^{-3}$]  & $\frac{ H_{\mathrm{T, 3MW}} }{ H_{\mathrm{T, 1MW}} }$  \\
     \midrule
     Support grid    &  3291.14                &  9496.55                &  2.89    \\
     BNCT 1st layer  &  3073.12                &  8029.02                &  2.61    \\
@@ -622,6 +620,6 @@ This research made use of the resources of the High Performance Computing Center
 \pagebreak
 
 \bibliographystyle{style/ans_js}  % custom ANS journal submission template bibliography style
-\bibliography{bibliography}
+\bibliography{revised_bibliography}
 
 \end{document}
