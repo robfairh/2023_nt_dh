@@ -65,10 +65,21 @@ And the 5 lobes are located at the four ends and center of the neck shim housing
 
 Yes. It now reads: "boron neutron capture therapy".
 
-> “Normal Fuel Elements” and “Control Fuel Elements do not need to be capitalized. “8x10 array” should be “8 × 10
-> array.” “x-direction” and “y-direction” should be “-direction” and “-direction.”
+> “Normal Fuel Elements” and “Control Fuel Elements do not need to be capitalized.
+
+Yes. It now reads: "normal fuel elements (NFEs) and control fuel elements (CFEs)".
+
+> “8x10 array” should be “8 × 10 array.”
+
+Yes. It now reads: "8 × 10 array".
+
+> “x-direction” and “y-direction” should be “-direction” and “-direction.”
+
+I didn't understand this one. I think there is missing information.
 
 > “the rector operated” should be “the reactor operated.”
+
+Yes. It now reads: "the reactor operated".
 
 > RA-6 Results: The Table I captions says “Values expressed in W.” But the table lists values in
 > units of W m⁻³ and unitless ratios.
