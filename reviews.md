@@ -1,17 +1,58 @@
 > Reviewer #1:
+>
+> Page, sentence  Question or comment
+> 3, "several other soft packages …."     Probably software packages
 
-Page, sentence  Question or comment
-3, "several other soft packages …."     Probably software packages
-8 III.A first paragraph You could also add that multi-step calculation also enables modelling structural changes, e.g. adding or removing some component inside the reactor tank. This is typical challenge in research reactors, which may have had several application throughout their operating history.
-13      Were there any geometrical simplifications in the model?
-14       You could add which were the main contributing nuclides (charged particles and gamma). This could even be in section II.
-17, "The neutron filter for the BNCT facility  is …"    According to this article, part of the neutron filter in Al2O3.
+Yes. You are right.
+
+> 8 III.A, first paragraph You could also add that multi-step calculation also enables modelling structural changes, e.g. adding or removing some component inside the reactor tank. This is typical challenge in research reactors, which may have had several application throughout their operating history.
+
+Yes. Good suggestion.
+
+
+> 13, Were there any geometrical simplifications in the model?
+
+Not in the ATR model.
+THe only simplification is in the geometry of the experiment.
+As we are only demonstrating the capabilities here, but not focusing on a specific experiment, the experiment is assumed as a long cylinder.
+I added the following sentence:
+
+This exercise considers an experiment sample of 1.46 cm in diameter and 168.27 cm in height made of aluminum.
+
+> 14, You could add which were the main contributing nuclides (charged particles and gamma). This could even be in section II.
+
+...
+
+> 17, "The neutron filter for the BNCT facility  is …"    According to this article, part of the neutron filter in Al2O3.
 
 https://urldefense.com/v3/__https://inis.iaea.org/collection/NCLCollectionStore/_Public/32/030/32030419.pdf__;!!DZ3fjg!5Jke-pgcccc4_JPN0sD2NhjZBCY_kb1BzkvSKvtKkfYVhGOT9YzFeRD9aY1FwT-Ov6Y-BH1NHIDPw7BzMA$
 
 I am not sure is this the current situation, but it could affect the thermal conduction properties of the neutron filter?
-21       Here you could also describe which were the main contributing nuclides
-Section IV      Was there any measured data available for comparison?
+
+Yes. You are certainly right.
+I think the way I phrased things was misleading. 
+I have updated it.
+
+The previous description read:
+The neutron filter for the BNCT facility is an 87.6-cm-long,
+77.1-cm-wide, 82.35-cm-high aluminum container. The filter is filled along the 87.6-cm dimension
+with the following materials: 17 cm of aluminum bricks, a 0.15-cm-thick cadmium sheet, 10 cm of
+aluminum, a 0.15-cm-thick cadmium sheet, and the rest is filled with alumina bricks.
+
+The new description reads:
+The neutron filter for the BNCT facility is an 87.6-cm-long,
+77.1-cm-wide, 82.35-cm-high container. The filter is filled along the 87.6-cm dimension with the
+following materials: 17 cm of aluminum bricks, a 0.15-cm-thick cadmium sheet, 10 cm of aluminum,
+a 0.15-cm-thick cadmium sheet, and the rest is filled with alumina (Al2O3) bricks.
+
+> 21, Here you could also describe which were the main contributing nuclides
+
+...
+
+> Section IV, Was there any measured data available for comparison?
+
+Unfortunately, I couldn't find any well defined sources.
+
 
 > Reviewer #2
 > 
@@ -221,9 +262,6 @@ It now reads:
 S. Sheludjakov and A. Serikov, “The advanced 3D method for activation analy-
 sis of fusion reactor materials,” Fusion Engineering and Design, 63-64, 487 (2002);
 doi.org/10.1016/S0920-3796(02)00183-7.
-
-
-LEFT HERE
 
 > Reference 34: include link https://urldefense.com/v3/__https://www.osti.gov/etdeweb/servlets/purl/> 21200039__;!!DZ3fjg!5Jke-pgcccc4_JPN0sD2NhjZBCY_kb1BzkvSKvtKkfYVhGOT9YzFeRD9aY1FwT-Ov6Y-BH1NHIAJwd8_PQ$  but note the paper
 > is in Korean.

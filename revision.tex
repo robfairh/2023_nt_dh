@@ -212,7 +212,9 @@ The delayed heating calculation workflow presented here relies on MOAA for perfo
 %% Intro: single/multiple irradiations
 MOAA performs material irradiation and decay calculations which can be configured to include a single or multiple irradiation steps.
 While a single-step calculation uses constant power irradiation, multi-step calculations handle several core configurations and piecewise constant power irradiation (i.e., different power levels at each time step).
-Such a capability allows for the modeling of evolution in material density, temperature, and geometry, as well as the control rod movement during the irradiation cycle.
+Moreover, the latter allows for the modeling of evolution in material density, temperature, and geometry of the reactor during the irradiation cycle.
+Some uses include the control rod movement or the addition and removal of components inside the reactor.
+Research reactors benefit from these uses as they enable multiple applications throughout their operating history.
 %% Predictor/Corrector
 Additionally, the calculations can be configured to utilize the conventional predictor-corrector scheme, which is a two-step process that combines explicit and implicit calculations to achieve better convergence.
 
@@ -395,8 +397,7 @@ This work considers the reactor composition at the \gls*{BOC} based on the avail
 % Problem definition
 This demonstration exercise focuses on the delayed heating of the A1 experiment position.
 The A1 experiment position is an inner A-hole, and it is hosted by the neck shim housing.
-The diameter of the hole is 0.625 in.
-This exercise considers an experiment sample made of aluminum.
+This exercise considers an experiment sample of 1.46 cm in diameter and 168.27 cm in height made of aluminum.
 
 % POWER
 Although the ATR maximum power rating is 250 MWth, most contemporary experiments do not require such a level, and the reactor operates at a much lower power.
@@ -481,8 +482,8 @@ The secondary holes have a diameter of 2.225 cm and are centered between the pri
 
 % BNCT filter
 On a side of the fuel element arrangement, there is a neutron filter that works as a source for \gls*{BNCT}, as shown in Figure \ref{fig:ra6-2}.
-The neutron filter for the \gls*{BNCT} facility is an 87.6-cm-long, 77.1-cm-wide, 82.35-cm-high aluminum container.
-The filter is filled along the 87.6-cm dimension with the following materials: 17 cm of aluminum bricks, a 0.15-cm-thick cadmium sheet, 10 cm of aluminum, a 0.15-cm-thick cadmium sheet, and the rest is filled with alumina bricks.
+The neutron filter for the \gls*{BNCT} facility is an 87.6-cm-long, 77.1-cm-wide, 82.35-cm-high container.
+The filter is filled along the 87.6-cm dimension with the following materials: 17 cm of aluminum bricks, a 0.15-cm-thick cadmium sheet, 10 cm of aluminum, a 0.15-cm-thick cadmium sheet, and the rest is filled with alumina (Al$_2$O$_3$) bricks.
 
 \begin{figure}[htbp!] %or H 
     \centering
