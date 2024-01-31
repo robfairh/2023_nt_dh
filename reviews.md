@@ -9,7 +9,6 @@ Yes. You are right.
 
 Yes. Good suggestion.
 
-
 > 13, Were there any geometrical simplifications in the model?
 
 Not in the ATR model.
@@ -21,7 +20,7 @@ This exercise considers an experiment sample of 1.46 cm in diameter and 168.27 c
 
 > 14, You could add which were the main contributing nuclides (charged particles and gamma). This could even be in section II.
 
-...
+See response for comment on page 21.
 
 > 17, "The neutron filter for the BNCT facility  is …"    According to this article, part of the neutron filter in Al2O3.
 
@@ -47,7 +46,18 @@ a 0.15-cm-thick cadmium sheet, and the rest is filled with alumina (Al2O3) brick
 
 > 21, Here you could also describe which were the main contributing nuclides
 
-...
+The quick answer is that I don't know which are the main contributing nuclides.
+Also, if I wanted to diplay that kind of information I would need to add several other images, and I think it would hinder the article flow.
+
+Getting into the specifics.
+Can I get this information from the simulations?
+Yes, I have looked at it before.
+Let's focus on the gamma decay.
+Isolating the contributing isotopes is not so straightforward because there are 4 variables that come into play.
+These variables are: isotope concentration, decay energy, location of the contributing cell in the reactor (mainly the distance to the target), and time.
+These variables do not contribute to the delayed heat equally, and their contribution is not necessarily linear.
+So, in order to get a decent figure with a decent explaination, I would need to make several assumptions (as well as run some additional simulations), and it wouldn't capture the whole picture.
+I still think though that this would be something interesting to look into in future work, keeping in mind all of these considerations.
 
 > Section IV, Was there any measured data available for comparison?
 
