@@ -41,3 +41,15 @@ Wrap up. Basically a summary of main points.
 ## Acks
 
 INL HPC
+
+
+# To build
+
+* in Makefile:
+manuscript = main
+* then run make
+* this will build main.pdf, which is the original version
+* if we use manuscript = revision it will build revised version
+* then run: latexdiff main.tex revision.tex > diff.tex to capture changes between files
+* then run: latexdiff --append-textcmd="field,name" main.bbl revision.bbl > diff.bbl to capture changes between .bib files
+* then run: pdflatex -interaction=nonstopmode diff.tex

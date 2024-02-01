@@ -1,4 +1,4 @@
-manuscript = revision
+manuscript = diff
 references = $(wildcard *.bib)
 latexopt   = -halt-on-error -file-line-error
 
